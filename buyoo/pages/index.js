@@ -36,25 +36,25 @@ export default function Home() { // export default  function Home()
       <ul>
         {products.map((product) => ( // all products list is added on main page
         // map function that applied on each item of array
-          <li key={product.id} style={{ marginBottom: "10px" }}> {/* sandy */ }
-            {product.name} - ${product.price}{" "}
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
-          </li>
-        ))}
-      </ul>
+          <li key={product.id} style={{ marginBottom: "10px" }}> {/* provide a product id as li key id and style */}
+            {product.name} - ${product.price}{" "} {/* rendor(visualize) Product List or Item List */}
+            <button onClick={() => addToCart(product)}>Add to Cart</button> {/* add new Button after each item for add item into cart */}
+          </li> // li closed
+        ))}{/* mapp function is closed after each item is added */}
+      </ul> {/* ul closed */}
 
-      <h2>Cart</h2>
-      {cart.length === 0 && <p>Cart is empty</p>}
-      {cart.length > 0 && (
-        <ul>
-          {cart.map((item) => (
-            <li key={item.id}>
-              {item.name} x {item.quantity} = ${item.price * item.quantity}
+      <h2>Cart</h2> {/* cart list start */}
+      {cart.length === 0 && <p>Cart is empty</p>} {/* check if cart is empty or 0 item then print a cart empty message  */}
+      {cart.length > 0 && ( //check if cart item value is more then 0 then run this block
+        <ul> {/* ul start */}
+          {cart.map((item) => ( //Map function start on cart object
+            <li key={item.id}> {/* set li key as cart item id */}
+              {item.name} x {item.quantity} = ${item.price * item.quantity} {/* calculate each item price and return the value  */}
             </li>
           ))}
         </ul>
       )}
-      <h3>Total: ${totalPrice()}</h3>
+      <h3>Total: ${totalPrice()}</h3>{/* print the total cart value after call the totalPrice Function*/}
     </div>
   );
 }
