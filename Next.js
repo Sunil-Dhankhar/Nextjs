@@ -105,7 +105,13 @@ Short Summery till Here => Next.js is React based full Stack Framework that is u
 
         Pre-requisite Knowledge for Learning Next.js
 Nextjs is React Based Framwork , so Move On React project, You should Knowledge of some Basic Technologies like
-        1. HTML (Structure of Web Pages) =>    Elements (<div>, <h1>, <a>, <img>), Forms (<form>, <input>, <button>), Attributes (href, src, alt, etc.). because React and Nextjs compponents are written in JSX
+        1. HTML (Structure of Web Pages) =>    Elements (<div>, <h1>, <a>, <img>), Forms (<form>, <input>, <button>), Attributes (href, src, alt, etc.). because React and Nextjs components are written in JSX (Javascript XML), this is like Html but its not Html.
 
+        2. CSS (Styling Web Pages) => Selectors, classes, IDs, Box model, margin/padding, Flexbox, Grid, Media queries (for responsive design). in NextJS you can use CSS Modules, Global CSS and also SCSS. Understanding of styling is must.
 
+        3. JavaScript (Logic & Interactivity) => Variables (let, const), Functions, Arrays and objects, ES6+ features (arrow functions, destructuring, map, filter), DOM basics (Optional). In NextJs this is very usefule beacause Next.js = React = JavaScript!. you plan your Logics according to your understanding and output is fully based on your logics Skill and how you use conditions, loops, states management etc.
+
+        4. React (Foundation for Next.js) => JSX syntax, Components (functional), props and state, useState, useEffect hooks, Basic routing (using react-router or idea of navigation), Lifting state up. this is very usefull and important because the NextJs is based on React. if you dont know about React then it is more difficult to understand the Nextjs.
+
+        
 */
