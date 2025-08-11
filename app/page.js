@@ -10,10 +10,6 @@ function  LikeCard({ name }) {
       <h2>{name}</h2>
       <p>Likes: {likes}</p>
       <button onClick={() => setLikes(likes + 1)}>Like 👍</button>
-      
-      
-    
-  
     </div>
   );
 }
