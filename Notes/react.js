@@ -256,7 +256,7 @@ short Summery in Hinglish
             means, when you create a Component and render same comonent multiple time like  <MyButton /> <MyButton />, you see each increment his own value not other because each component has its own state. and after click the each component change own state.
 
     🔧 Using Hooks => In React Hooks are Special Function theat provide provision for use state or lifecycle features in React functional Components.
-                        Each hooks start with use, you can say hook is start with prefix use like useState, useEffect, useRef, etc.
+                        Each hooks start with use, you can say hook is start with prefix 'use' like useState, useEffect, useRef, etc.
                         
                         for Example=> const [count, setCount] = useState(0) // declare the state as 0 value.
                                         this is useState hook that provide count named State variable and setCount named update function 
@@ -266,15 +266,18 @@ short Summery in Hinglish
                                         1. Always Call hooks in top-level part of Component. dont write or call inside Loops, Condition, or nested function
                                                 for example => function MyApp(){ const [count, setCount] = useState(0);}
                                         2. create another component and check inside the created component that the condition is true if true then the embed or nest the another component here.
-                                                for example => function MyButt{ {id !== "0" && <MyApp />} }      
-                            when you pass the data through the url then dont use <a> tag because the html <a> tag lost the react properties while click on linke page with <a> tag because it reload the full page. and when page full load. then it lost the properties like state, location, etc.
-                            always use in nextjs <Link href="---"> or in simple React <Link to="----">.
-                            and sender page and receiver page required some properties from react or js so you can provide these prop into the files like
-                                    send property => import Link from 'next/link'; // this is used to import the link properties for pass the link with data
-                                    Receive property => import { useRouter } from 'next/router'; // this is used for import the router features or properties into this project. this is also used as hook for receive or extract the url holded values from the object.
+                                                for example => function MyButt{ {id !== "0" && <MyApp />} }   
+                                                
+    🔀 Transfer data between components =>
+
+        when you pass the data through the url then dont use <a> tag because the html <a> tag lost the react properties while click on linke page with <a> tag because it reload the full page. and when page full reloading then it lost the properties or data like state, location, path,  etc.
+        when you use React or NEXT.JS, always use <Link href="---"> or in simple React <Link to="----"> because when we use this it just reload the small part or a component from the page rather then entire page. it helps to create faster app or web app.
+        when we use React or next.js the sender page and receiver page required some properties from react or next.js so you can provide these prop into the files where you required to use hook. 
+        Like => send property => import Link from 'next/link'; // this is used to import the link properties for pass the link with data
+                Receive property => import { useRouter } from 'next/router'; // this is used for import the router features or properties into this project. this is also used as hook for receive or extract the url holded values from the object.
             👏 there are various ways to transfer the data between the components. 
                 some methods are :=>    
-                    1. URL params (router.query) => transfer the data using url property and passed data is display in url also       
+                    1. URL params (router.query) => transfer the data using url property and passed data is display in url also.       
                     2. React Context API => transfer the data from one component to another component using api technique. and its transfere data never display into the url
                     3. Redux/Zustand     => this is also transfer data from one component to another component without showing data into url.
                     4. Session/Local Storage => this is temprary storage that store the data and where you need this data into your project you can use this stored data. this is also not display data into the url.
@@ -308,7 +311,7 @@ short Summery in Hinglish
                                             const HomePage = () => {
                                                 return (
                                                     <ThemeProvider>
-                                                    <App />
+                                                        <App />
                                                     </ThemeProvider>
                                                 );
                                             };
@@ -366,7 +369,7 @@ short Summery in Hinglish
 
                                                 return (
                                                     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-                                                    {children}
+                                                        {children}
                                                     </ThemeContext.Provider>
                                                 );
                                             };
@@ -404,5 +407,16 @@ short Summery in Hinglish
 
                                     c.    HomePage.js or index.js → to render the App with ThemeProvider.
 
+                🔁 Redux => Redux is a state management library that used to manage data inside the React. 
+                                    Suppose, if your app have multiple components that they are using same data like user login status, cart items, theme, etc then everywhere sending of props is very complaxing so like this type of situation or condition Redux Playing a Role and helping us 
+                                    
+                                       ➡️ How help Redux => 
+                                        
+                                            1. Redux is like a Centerlized Hub. where each of state is stored.
+                                            2. Send an action to Redux for telling that what to do. then After the Reducers decide that how's  State is change or Update.
+                                                
+                🔁 Zustand => Zustand is a German word that means "State". this is also a state management Library, but its lightweight and simple then Redux library. 
+                                this have not boilerplate and also have not complexity like action/reducers formal system. 
+                                in Zustand just create a hook and use this. its like a Plug and Play Hook.
 
 */
