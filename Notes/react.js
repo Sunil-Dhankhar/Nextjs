@@ -1,5 +1,7 @@
 /*  ************************************** React *****************************************************************
 
+     { ES7+ React/Redux/React-Native } Snippets extention for vs code.
+
     React is a Javascript Library that is used to create and design Web Pages — especially single-page applications (SPA). this is used for build User Interface (UI) like forms, Buttons, list etc.
     in React app you Create Components, that are small pieses or blocks parts of UI. You can create nesting of componenets means create component inside another component.
     each component is a part of single UI like Button, card or Full page.
@@ -91,9 +93,15 @@ short Summery in Hinglish
                                                 </div> //end of div tag 
                                             );//end of nested component
                                         } // end of main component.
+    
+    🔀 React Router => React Router is a standard library for routing in React applications. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps UI in sync with the URL. 
+                        in simple terms, it helps to manage the navigation and rendering of different components based on the URL. means the page doesnt reload, but content is updated dynamically with url change.
 
+    
+    
+    
     📦  export default –  Specify to Main Component =>
-                        When you code main component inside the React file and then after you export that component with export default keyword taht means this exported component is main component of the React file and if you import the react file then this main component is exported by default in the impoted rect file and this exported component must be used.
+                    When you code main component inside the React file and then after you export that component with export default keyword taht means this exported component is main component of the React file and if you import the react file then this main component is exported by default in the impoted rect file and this exported component must be used.
     
     📝  Writing Markup with JSX =>  In React app when you write markup (Like <h1>Hello</h1>) HTML tags or nodes that are actual JSX. JSX is Optional but almost every Developer use this for markup because its to easy for write and read the code.
                                         JSX is Strict Script language and it ensure that if a tag is opend then should be close. if not Close then this throw an error

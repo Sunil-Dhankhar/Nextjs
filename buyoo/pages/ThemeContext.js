@@ -1,4 +1,5 @@
 // ThemeContext.js
+'use client'
 import React, { createContext, useState } from 'react';
 
 // Context create karo
