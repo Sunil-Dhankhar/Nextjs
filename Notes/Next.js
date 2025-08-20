@@ -113,5 +113,69 @@ Nextjs is React Based Framwork , so Move On React project, You should Knowledge 
 
         4. React (Foundation for Next.js) => JSX syntax, Components (functional), props and state, useState, useEffect hooks, Basic routing (using react-router or idea of navigation), Lifting state up. this is very usefull and important because the NextJs is based on React. if you dont know about React then it is more difficult to understand the Nextjs.
 
-        
+
+always create component(project files) in src/app component(foldername like Home, Aboutus, etc) with each folder have separate files for each component, page, and style. 
+each component file name is same as page.jsx or page.tsx.
+
+in Next js project folder images are stored in public folder. and you can access these  images from here into your project by using the /public path.
+
+For fetching or crud operation with database you need a backend API or a database client like Prisma. so you setup Prisma in your project.
+and then after setting up Prisma, you can use it to interact with your database easily. 
+
+In your API routes or server-side functions, you can import the Prisma client and use it to perform database operations.
+your route handlers can then call these functions to interact with the database.
+routers location in your project is typically under the src/app/api directory.
+
+In your API routes, you can define your CRUD operations using the Prisma client.
+
+In App folder (known as App Router) are main two files one is layout and one is page. the page.js file is used to define the main content of the route, while the layout.js file is used to define the overall layout and structure of the page.
+and the layout.js file can also include shared components like headers, footers, and sidebars that are used across multiple pages.
+
+for database connection you need  to create a Prisma client instance and use it to interact with your database. as well as .env file to store your database credentials and other sensitive information.
+
+when you use any hook like useState or useEffect in your component, you need to import React at the top of your file. This is because these hooks are part of the React library and need to be accessed through it.
+you can import react with hooks as well as { useState, useEffect } from 'react';
+if you are using hooks then dont forget to apply "use client"; in your component file, if you forget then you got error related with echma.
+
+LOGIN =>
+for login in Next.js you can create a login API route and use it to authenticate users. You can then call this API route from your login form component to handle user login.
+ then you have required to set up your login form to make a POST request to this API route with the user's credentials.
+ like npm install next-auth   (NEXT Autentication for login that handles sessions, JWT, and more)
+
+
+
 */
+
+
+
+/* ✅ Recommended Solutions for Shortcut-style CRUD:
+1. Prisma (most popular & modern ORM)
+
+Prisma lets you do this kind of syntax:
+
+const newUser = await prisma.user.create({
+  data: {
+    username: 'sandy',
+    email_id: 'sandeep@gmail.com',
+    password: hashedPass,
+    user_status: 0,
+  },
+});
+
+
+🔄 Update:
+
+await prisma.user.update({
+  where: { id: 1 },
+  data: { username: 'updated_name' }
+});
+
+
+🗑 Delete:
+
+await prisma.user.delete({ where: { id: 1 } });
+
+
+🔍 Get All:
+
+const users = await prisma.user.findMany(); */
